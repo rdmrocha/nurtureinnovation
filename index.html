@@ -1,68 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hand Hygiene Product</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 20px;
-    }
-
-    h1 {
-      color: #333;
-    }
-
-    p {
-      color: #666;
-      line-height: 1.5;
-    }
-
-    img {
-      max-width: 100%;
-      height: auto;
-      margin-bottom: 20px;
-    }
-  </style>
+    <title>Nurture Innovation</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="main.css" />
 </head>
+
 <body>
-  <h1>Hand Hygiene Product</h1>
+    <div class="dot">DOT</div>
+    <div class="splash" id="hide">
+        <div class="loader">
+            <div class="progress"></div>
+        </div>
+        <img height="100" src="nurture_logo.png" alt="nurture logo" />
+    </div>
 
-  <img src="https://images.wagwalkingweb.com/media/breed/dachshund/appearance/dachshund.png" alt="Hand Hygiene Product">
+    <div class="content" id="showAfter">
+        <div class="anim-holder">
+            <img width="440" src="dream_team_transparent.png" />
+        </div>
+    </div>
 
-  <h2>About Our Product</h2>
-  <p>
-    Our hand hygiene product is designed to effectively cleanse and sanitize your hands, keeping you protected from harmful germs and bacteria. It is formulated with high-quality ingredients that are gentle on the skin while providing maximum germ-fighting power.
-  </p>
-
-  <h2>Key Features</h2>
-  <ul>
-    <li>Powerful antibacterial properties</li>
-    <li>Gentle and non-irritating</li>
-    <li>Quick-drying formula</li>
-    <li>Convenient and easy to use</li>
-    <li>Portable and travel-friendly</li>
-  </ul>
-
-  <h2>How to Use</h2>
-  <ol>
-    <li>Dispense a small amount of the product onto your palm.</li>
-    <li>Rub your hands together, covering all surfaces.</li>
-    <li>Continue rubbing for at least 20 seconds until dry.</li>
-    <li>Enjoy clean and germ-free hands!</li>
-  </ol>
-
-  <h2>Why Choose Us</h2>
-  <p>
-    We are committed to providing the highest quality hand hygiene products to our customers. Our product is extensively tested to ensure its effectiveness in killing germs, while also meeting the highest safety and quality standards. With our hand hygiene product, you can have peace of mind knowing that your hands are protected against harmful bacteria and viruses.
-  </p>
-
-  <h2>Contact Us</h2>
-  <p>
-    For more information or to place an order, please contact our customer support team at <a href="mailto:info@example.com">info@example.com</a> or call us at <a href="tel:+123456789">+123456789</a>.
-  </p>
 </body>
-</html>
 
+<script>
+    let splash = document.getElementById('hide')
+    let content = document.getElementById('showAfter')
+    splash.addEventListener("animationend", (e) => {
+        splash.classList.add('hide')
+        content.classList.add('show', 'animate-in')
+    });
+</script>
+
+</html>
